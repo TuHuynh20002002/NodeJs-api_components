@@ -1,4 +1,4 @@
-import express, { Express, Request, Response } from "express";
+import { Express } from "express";
 
 const baseRoute = require("../routes/base.route");
 const ErrorController = require("../controllers/error.controller");

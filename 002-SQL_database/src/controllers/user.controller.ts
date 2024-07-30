@@ -7,11 +7,23 @@ class UserController {
   async getAllUsers(req: Request, res: Response, next: NextFunction) {
     try {
       const [users] = await User.fetchAll();
-      if (users.length === 0) {
+      res.status(200).json(users);
+    } catch (error) {
+      if (error instanceof Error) {
+        res.status(500).json({ message: error.message });
+      }
+    }
+  }
+
+  // [GET] /api/user/username/{username}
+  async getUserByUsername(req: Request, res: Response, next: NextFunction) {
+    try {
+      const [user] = await User.findByUsername(req.params.username);
+      if (user.length === 0) {
         res.status(404).json({ message: "User not found" });
         return;
       }
-      res.status(200).json(users);
+      res.status(200).json(user);
     } catch (error) {
       if (error instanceof Error) {
         res.status(500).json({ message: error.message });
@@ -29,22 +41,6 @@ class UserController {
       }
       res.status(200).json(user);
     } catch (error: any) {
-      if (error instanceof Error) {
-        res.status(500).json({ message: error.message });
-      }
-    }
-  }
-
-  // [GET] /api/user/username/{username}
-  async getUserByUsername(req: Request, res: Response, next: NextFunction) {
-    try {
-      const [user] = await User.findByUsername(req.params.username);
-      if (user.length === 0) {
-        res.status(404).json({ message: "User not found" });
-        return;
-      }
-      res.status(200).json(user);
-    } catch (error) {
       if (error instanceof Error) {
         res.status(500).json({ message: error.message });
       }

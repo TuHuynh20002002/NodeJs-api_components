@@ -1,13 +1,7 @@
-const mysqlDriver = require("mysql2");
+const Database = require("better-sqlite3");
 
 require("dotenv").config();
 
-const dbPool = mysqlDriver.createPool({
-  user: process.env.DB_USERNAME,
-  password: process.env.DB_PASSWORD,
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  database: process.env.DB_DATABASE,
-});
+const db = new Database(process.env.DB_PATH || ":memory:");
 
-export default dbPool.promise();
+export default db;

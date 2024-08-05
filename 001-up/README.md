@@ -15,17 +15,17 @@ Today project is a basic NodeJs API app. This project use Typescript programming
 
 ## Usage
 1.  Change dir to the project directory:
-    ```
+    ```bash
     cd ./001-up
     ```
 
 2.  Install node_modules packages:
-    ```
+    ```bash
     npm install
     ```
 
 3.  Start the server (choose dev or prod environment). The dev-server will restart every time the code is changed.
-    ```
+    ```bash
     # Dev environment
     npm run dev
 
@@ -33,13 +33,13 @@ Today project is a basic NodeJs API app. This project use Typescript programming
     npm run prod
     ```
     
-4.  Open a different shell to use the application. You must change {host} to your IP address or domain name (e.g., localhost). It depends on your setup.
-    ```
+4.  Open a different shell to use the application. You must change ${host} to your IP address or domain name (e.g., localhost). It depends on your setup.
+    ```bash
     # Health check
-    curl {host}:3000/api/up
+    curl ${host}:3000/api/up
 
     # Home
-    curl {host}:3000/api/
+    curl ${host}:3000/api/
     ```
 
 

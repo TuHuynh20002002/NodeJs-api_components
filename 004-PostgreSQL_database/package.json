@@ -1,5 +1,5 @@
 {
-  "name": "001-up",
+  "name": "004-postgresql-database",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {

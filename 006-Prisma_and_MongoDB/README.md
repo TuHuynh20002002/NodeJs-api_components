@@ -30,13 +30,12 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
     cp ./.env.example ./.env
     ```
 
-
-3.  Modify your database information in `.env`.
+4.  Modify your database information in `.env`.
     ```properties
     DATABASE_URL="mongodb://username:password@localhost:27017/database"
     ```
 
-4.  Start the server (choose dev or prod environment). The dev-server will restart every time the code is changed.
+5.  Start the server (choose dev or prod environment). The dev-server will restart every time the code is changed.
     ```bash
     # Dev environment
     npm run dev
@@ -45,7 +44,7 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
     npm run prod
     ```
     
-5.  Open a different shell to use the application. You must change ${host} to your IP address or domain name (e.g., localhost). It depends on your setup.
+6.  Open a different shell to use the application. You must change ${host} to your IP address or domain name (e.g., localhost). It depends on your setup.
     ```bash
     # Health check
     curl ${host}:3000/api/up

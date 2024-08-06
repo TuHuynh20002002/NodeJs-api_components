@@ -3,7 +3,7 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nodejs,express,typescript,mongodb&perline=10"/>
+    <img src="https://skillicons.dev/icons?i=nodejs,express,typescript,mongodb,prisma&perline=10"/>
   </a>
 </p>
 
@@ -11,12 +11,13 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
 ## Features
 - Basic NodeJS API app + NoSQL database
 - MongoDB
+- Prisma
 
 
 ## Usage
 1.  Change dir to the project directory:
     ```bash
-    cd ./002-MongoDB
+    cd ./006-Prisma_and_MongoDB
     ```
 
 2.  Install node_modules packages:
@@ -24,13 +25,15 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
     npm install
     ```
 
-3.  Change .env.example to .env and modify your database information.
+3. Copy `.env.example` to `.env`
+    ```bash
+    cp ./.env.example ./.env
+    ```
+
+
+3.  Modify your database information in `.env`.
     ```properties
-    DB_USERNAME=root
-    DB_PASSWORD=secret
-    DB_HOST=localhost
-    DB_PORT=27017
-    DB_DATABASE=database
+    DATABASE_URL="mongodb://username:password@localhost:27017/database"
     ```
 
 4.  Start the server (choose dev or prod environment). The dev-server will restart every time the code is changed.
@@ -56,6 +59,46 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
     # Find user by email. Change ${email} to the email you want to find.
     curl ${host}:3000/api/user/email/${email}
     ```
+
+
+## Available routes
+<div align="center">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>URL</th>
+        <th>Function</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>/api/</td>
+        <td>home</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>/api/up</td>
+        <td>health check</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>/api/user/all</td>
+        <td>get users list</td>
+      </tr>      <tr>
+        <td>4</td>
+        <td>/api/user/username/${username}</td>
+        <td>find user by username</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>/api/user/email/${email}</td>
+        <td>find user by email</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
 ## Contributing

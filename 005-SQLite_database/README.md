@@ -54,5 +54,45 @@ Today project is a basic NodeJs API app with SQLite database. This project use T
     ```
 
 
+## Available routes
+<div align="center">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>URL</th>
+        <th>Function</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>/api/</td>
+        <td>home</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>/api/up</td>
+        <td>health check</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>/api/user/all</td>
+        <td>get users list</td>
+      </tr>      <tr>
+        <td>4</td>
+        <td>/api/user/username/${username}</td>
+        <td>find user by username</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>/api/user/email/${email}</td>
+        <td>find user by email</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
 ## Contributing
 If you would like to contribute to this project, feel free to fork the repository and submit a pull request. Any contributions are welcome!

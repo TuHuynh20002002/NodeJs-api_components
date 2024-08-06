@@ -1,23 +1,26 @@
-import { Schema, model } from "mongoose";
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
 
-const User = new Schema(
-  {
-    username: {
-      type: String,
-      maxLength: 24,
-      required: true,
-      unique: true,
-    },
-    email: {
-      type: String,
-      maxLength: 24,
-      required: true,
-      unique: true,
-    },
-  },
-  {
-    timestamps: true,
+class User {
+  static fetchAll() {
+    return prisma.users.findMany();
   }
-);
 
-module.exports = model("users", User);
+  static findByUsername(username: String) {
+    return prisma.users.findUnique({
+      where: {
+        username: username,
+      },
+    });
+  }
+
+  static findByEmail(email: String) {
+    return prisma.users.findUnique({
+      where: {
+        email: email,
+      },
+    });
+  }
+}
+
+module.exports = User;

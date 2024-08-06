@@ -1,5 +1,5 @@
 {
-  "name": "001-up",
+  "name": "006-prisma-and-mongodb",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@prisma/client": "^5.17.0",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongoose": "^8.5.2"
@@ -19,6 +20,7 @@
     "@types/node": "^22.0.0",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.4",
+    "prisma": "^5.17.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   }

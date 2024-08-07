@@ -1,5 +1,5 @@
 {
-  "name": "001-up",
+  "name": "002-mongodb",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {

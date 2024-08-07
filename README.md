@@ -10,8 +10,11 @@ This repo is about NodeJs API components. The projects in the repo mainly use Ty
 
 ## Features
 - Basic API application
-- MySQL database
 - MongoDB
+- MySQL database
+- PostgreSQL database
+- SQLite database
+- Prisma + MongoDB
 
 
 ## Installation

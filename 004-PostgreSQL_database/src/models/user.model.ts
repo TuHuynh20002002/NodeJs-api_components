@@ -9,7 +9,7 @@ class User {
       return result.rows;
     } catch (error) {
       if (error instanceof Error) {
-        return { message: error.message };
+        throw new Error(error.message);
       }
     }
   }

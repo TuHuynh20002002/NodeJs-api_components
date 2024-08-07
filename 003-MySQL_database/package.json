@@ -1,5 +1,5 @@
 {
-  "name": "001-up",
+  "name": "003-mysql-database",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {

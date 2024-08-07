@@ -25,12 +25,12 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
     npm install
     ```
 
-3. Copy `.env.example` to `.env`
+3. Copy `.env.example` to `.env`:
     ```bash
     cp ./.env.example ./.env
     ```
 
-4.  Modify your database information in `.env`.
+4.  Modify your database information in `.env`:
     ```properties
     DATABASE_URL="mongodb://username:password@localhost:27017/database"
     ```

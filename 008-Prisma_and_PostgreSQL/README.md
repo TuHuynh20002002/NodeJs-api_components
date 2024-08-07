@@ -25,12 +25,12 @@ Today project is a basic NodeJs API app with PostgreSQL database. This project u
     npm install
     ```
 
-3. Copy `.env.example` to `.env`
+3. Copy `.env.example` to `.env`:
     ```bash
     cp ./.env.example ./.env
     ```
 
-4.  Modify your database information in `.env`.
+4.  Modify your database information in `.env`:
     ```properties
     DATABASE_URL="postgresql://username:password@localhost:5432/database"
     ```
@@ -40,9 +40,9 @@ Today project is a basic NodeJs API app with PostgreSQL database. This project u
     ```bash
     npx prisma db pull --force --schema ./src/prisma/schema.prisma 
     ```
-    - If you don't have table in database, get the instructions from [Prisma docs](https://www.prisma.io/docs/getting-started) to create, push, migrate tables,... to database.
+    - If you don't have table in database, get the instructions from [Prisma docs](https://www.prisma.io/docs/) to create, push, migrate tables,... to database.
 
-6.  Generate Prisma Client
+6.  Generate Prisma Client:
     ```bash
     npx prisma generate --schema ./src/prisma/schema.prisma 
     ```

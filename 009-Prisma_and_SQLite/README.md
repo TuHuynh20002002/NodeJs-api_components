@@ -35,14 +35,14 @@ Today project is a basic NodeJs API app with SQLite database. This project use T
     DATABASE_URL="file:./db.sqlite3"
     ```
 
-5.  Update your tables' structure in prisma file and generate Prisma Client:
-    ```bash
-    npx prisma generate --schema ./src/prisma/schema.prisma 
-    ```
-
-6.  If you don't have `db.sqlite3` file yet, use the command below to generate database and table:
+5.  If you don't have `db.sqlite3` file yet, use the command below to generate database and table:
     ```bash
     npx prisma db push --schema ./src/prisma/schema.prisma 
+    ```
+
+6.  Generate Prisma Client:
+    ```bash
+    npx prisma generate --schema ./src/prisma/schema.prisma 
     ```
 
 7.  Start the server (choose dev or prod environment). The dev-server will restart every time the code is changed.

@@ -3,14 +3,14 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nodejs,express,typescript,mongodb,prisma&perline=10"/>
+    <img src="https://skillicons.dev/icons?i=nodejs,express,typescript,mysql,prisma&perline=10"/>
   </a>
 </p>
 
 
 ## Features
-- Basic NodeJS API app + NoSQL database
-- MongoDB
+- Basic NodeJS API app + SQL database
+- Mysql database
 - Prisma
 
 
@@ -35,7 +35,19 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
     DATABASE_URL="mongodb://username:password@localhost:27017/database"
     ```
 
-5.  Start the server (choose dev or prod environment). The dev-server will restart every time the code is changed.
+5.  **Optional:
+    - If you have database already and want to pull tables' structure:
+    ```bash
+    npx prisma db pull --force --schema ./src/prisma/schema.prisma 
+    ```
+    - If you don't have table in database, get the instructions from [Prisma docs](https://www.prisma.io/docs/getting-started) to create, push, migrate tables,... to database.
+
+6.  Generate Prisma Client
+    ```bash
+    npx prisma generate --schema ./src/prisma/schema.prisma 
+    ```
+
+7.  Start the server (choose dev or prod environment). The dev-server will restart every time the code is changed.
     ```bash
     # Dev environment
     npm run dev
@@ -44,7 +56,7 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
     npm run prod
     ```
     
-6.  Open a different shell to use the application. You must change ${host} to your IP address or domain name (e.g., localhost). It depends on your setup.
+8.  Open a different shell to use the application. You must change ${host} to your IP address or domain name (e.g., localhost). It depends on your setup.
     ```bash
     # Health check
     curl ${host}:3000/api/up

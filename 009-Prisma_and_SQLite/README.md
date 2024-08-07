@@ -1,23 +1,23 @@
 ## Introduction
-Today project is a basic NodeJs API app with MongoDB. This project use Typescript programming languague and ExpressJS web application framework.
+Today project is a basic NodeJs API app with SQLite database. This project use Typescript programming languague and ExpressJS web application framework.
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nodejs,express,typescript,mongodb,prisma&perline=10"/>
+    <img src="https://skillicons.dev/icons?i=nodejs,express,typescript,sqlite,prisma&perline=10"/>
   </a>
 </p>
 
 
 ## Features
-- Basic NodeJS API app + NoSQL database
-- MongoDB
+- Basic NodeJS API app + SQL database
+- SQLite database
 - Prisma
 
 
 ## Usage
 1.  Change dir to the project directory:
     ```bash
-    cd ./006-Prisma_and_MongoDB
+    cd ./009-Prisma_and_SQLite
     ```
 
 2.  Install node_modules packages:
@@ -32,10 +32,20 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
 
 4.  Modify your database information in `.env`:
     ```properties
-    DATABASE_URL="mongodb://username:password@localhost:27017/database"
+    DATABASE_URL="file:./db.sqlite3"
     ```
 
-5.  Start the server (choose dev or prod environment). The dev-server will restart every time the code is changed.
+5.  If you don't have `db.sqlite3` file yet, use the command below to generate database and table:
+    ```bash
+    npx prisma db push --schema ./src/prisma/schema.prisma 
+    ```
+
+6.  Generate Prisma Client:
+    ```bash
+    npx prisma generate --schema ./src/prisma/schema.prisma 
+    ```
+
+7.  Start the server (choose dev or prod environment). The dev-server will restart every time the code is changed.
     ```bash
     # Dev environment
     npm run dev
@@ -44,7 +54,7 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
     npm run prod
     ```
     
-6.  Open a different shell to use the application. You must change ${host} to your IP address or domain name (e.g., localhost). It depends on your setup.
+8.  Open a different shell to use the application. You must change ${host} to your IP address or domain name (e.g., localhost). It depends on your setup.
     ```bash
     # Health check
     curl ${host}:3000/api/up

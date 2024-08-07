@@ -1,5 +1,5 @@
 ## Introduction
-Today project is a basic NodeJs API app with MongoDB. This project use Typescript programming languague and ExpressJS web application framework.
+Today project is a basic NodeJs API app with MySQL database. This project use Typescript programming languague and ExpressJS web application framework.
 
 <p align="center">
   <a href="https://skillicons.dev">
@@ -10,14 +10,14 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
 
 ## Features
 - Basic NodeJS API app + SQL database
-- Mysql database
+- MySQL database
 - Prisma
 
 
 ## Usage
 1.  Change dir to the project directory:
     ```bash
-    cd ./006-Prisma_and_MongoDB
+    cd ./007-Prisma_and_MySQL
     ```
 
 2.  Install node_modules packages:
@@ -25,12 +25,12 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
     npm install
     ```
 
-3. Copy `.env.example` to `.env`
+3. Copy `.env.example` to `.env`:
     ```bash
     cp ./.env.example ./.env
     ```
 
-4.  Modify your database information in `.env`.
+4.  Modify your database information in `.env`:
     ```properties
     DATABASE_URL="mongodb://username:password@localhost:27017/database"
     ```
@@ -40,9 +40,9 @@ Today project is a basic NodeJs API app with MongoDB. This project use Typescrip
     ```bash
     npx prisma db pull --force --schema ./src/prisma/schema.prisma 
     ```
-    - If you don't have table in database, get the instructions from [Prisma docs](https://www.prisma.io/docs/getting-started) to create, push, migrate tables,... to database.
+    - If you don't have table in database, get the instructions from [Prisma docs](https://www.prisma.io/docs/) to create, push, migrate tables,... to database.
 
-6.  Generate Prisma Client
+6.  Generate Prisma Client:
     ```bash
     npx prisma generate --schema ./src/prisma/schema.prisma 
     ```

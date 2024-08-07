@@ -3,7 +3,7 @@ import router from "./routes/app.route";
 
 const app: Express = express();
 const morgan = require("morgan");
-const port = 3001;
+const port = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

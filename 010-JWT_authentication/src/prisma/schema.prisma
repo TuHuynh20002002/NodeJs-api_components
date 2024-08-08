@@ -1,5 +1,5 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
   previewFeatures = ["omitApi"]
 }
 
@@ -11,7 +11,7 @@ datasource db {
 model users {
   id       String  @id @default(auto()) @map("_id") @db.ObjectId
   email    String  @unique(map: "email_1")
-  password String?
+  password String
   position String?
   username String  @unique(map: "username_1")
 }

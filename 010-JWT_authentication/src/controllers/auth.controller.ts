@@ -13,7 +13,6 @@ class AuthController {
     try {
       const { email, password } = req.body;
       const user = await User.findByEmail(email);
-      console.log(user);
 
       if (user === null) {
         res.status(401).json({ error: "User not found" });

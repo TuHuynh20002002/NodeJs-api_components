@@ -88,7 +88,8 @@ Today project is a basic NodeJs API app with PostgreSQL database. This project u
         <td>3</td>
         <td>/api/user/all</td>
         <td>get users list</td>
-      </tr>      <tr>
+      </tr>
+      <tr>
         <td>4</td>
         <td>/api/user/username/${username}</td>
         <td>find user by username</td>
